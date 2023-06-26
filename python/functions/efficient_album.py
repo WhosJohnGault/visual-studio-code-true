@@ -9,13 +9,21 @@
 # ber of tracks, add that value to the album’s dictionary Make at least one new
 # function call that includes the number of tracks on an album
 
-def make_album(artist_name, album_name):
+#To do:
+#Create a while loop so users can input the name of an artist and an album
+#while the loop condition is true have a function be called
+#prompt the user to enter an artist name and an album 
+#prompt the user if they want to enter the number of songs on the album, if they enter 'n' skip
+#
+
+prompt="\nPlease enter the name of an artist you enjoy:"
+prompt+="\nEnter quit if you don't wish to enter another entry"
+
+prompt2="\nPlease enter the name of an album by" + artist_name + "you enjoy:"
+prompt3="If you wish you can enter "
+while True:
+    def make_album(artist_name,album_name,songs):
     """return a dictionary about an artist and a music album"""
-    artistalbum={'artist':artist_name.title(), 'album':album_name.title()}
-    artistalbum.update({artist_name,album_name})
-    return artistalbum
-#these functions will print what we want to show, but we should make this more efficient by using an additional function
-musician=make_album(artist_name ='kurt cobain', album_name='bleach')
-print(musician)
-musician=make_album(artist_name ='lunchmoney lewis', album_name='real thing')
-print(musician)
+        artistalbum={'artist':artist_name.title(), 'album':album_name.title(),'number of tracks':songs}
+
+        return artistalbum    
